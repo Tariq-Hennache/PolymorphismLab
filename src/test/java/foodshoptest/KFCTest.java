@@ -52,4 +52,11 @@ public class KFCTest {
 
     }
 
+    @Test
+    public void canSuggest(){
+        String expected = "Our special food of the day is chicken poppers";
+        String actual = kfc.suggest("chicken poppers");
+        assertEquals(expected, actual);
+    }
+
 }

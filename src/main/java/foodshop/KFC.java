@@ -1,6 +1,6 @@
 package foodshop;
 
-public class KFC extends FoodShop{
+public class KFC extends FoodShop implements ISuggest{
 
     private Integer familyBucketSize;
     private Boolean healthy;
@@ -9,6 +9,10 @@ public class KFC extends FoodShop{
         super(name);
         this.familyBucketSize = familyBucketSize;
         this.healthy = healthy;
+    }
+
+    public String suggest(String food){
+        return String.format("Our special food of the day is %s", food);
     }
 
     public Integer getFamilyBucketSize(){
