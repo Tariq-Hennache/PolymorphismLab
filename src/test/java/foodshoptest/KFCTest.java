@@ -11,7 +11,7 @@ public class KFCTest {
 
     @BeforeEach
     public void setUp(){
-        kfc = new KFC("Box meal",8);
+        kfc = new KFC("Box meal", false , 8);
     }
 
     @Test
@@ -30,9 +30,17 @@ public class KFCTest {
 
     @Test
     public void canGetFamilyBucketSize(){
-        kfc = new KFC("Snack box", 6);
+        kfc = new KFC("Snack box", false , 6);
         int expected = 6;
         int actual = kfc.getFamilyBucketSize();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void canBeHealthy(){
+        kfc = new KFC("snack box", true, 10);
+        Boolean expected = true;
+        Boolean actual = kfc.isItHealthy();
         assertEquals(expected, actual);
     }
 

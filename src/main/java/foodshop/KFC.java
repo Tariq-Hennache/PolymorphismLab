@@ -3,10 +3,12 @@ package foodshop;
 public class KFC extends FoodShop{
 
     private Integer familyBucketSize;
+    private Boolean healthy;
 
-    public KFC(String name, Integer familyBucketSize){
+    public KFC(String name,Boolean healthy, Integer familyBucketSize){
         super(name);
         this.familyBucketSize = familyBucketSize;
+        this.healthy = healthy;
     }
 
     public Integer getFamilyBucketSize(){
@@ -15,6 +17,15 @@ public class KFC extends FoodShop{
 
     public void setFamilyBucketSize(Integer familyBucketSize) {
         this.familyBucketSize = familyBucketSize;
+    }
+
+    public Boolean isItHealthy(){
+        return healthy;
+    }
+
+    @Override
+    public void setHealthy(boolean healthy) {
+        super.setHealthy(healthy);
     }
 
     @Override

@@ -20,4 +20,19 @@ public class SubwayTest {
         String actual = subway.popularFood();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void canAddCrisps(){
+        String expected = "Do you want crisps";
+        String actual = subway.addCrisps();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void canGetBreadType(){
+        subway = new Subway("Turkey slices", "Italian Herb");
+        String expected = "Italian Herb";
+        String actual = subway.getBreadType();
+        assertEquals(expected, actual);
+    }
 }
