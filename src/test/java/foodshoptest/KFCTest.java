@@ -44,4 +44,12 @@ public class KFCTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void canGetPopularFood_withArgument(){
+        String expected = "snack box";
+        String actual = kfc.popularFood("snack box" );
+        assertEquals(expected, actual);
+
+    }
+
 }

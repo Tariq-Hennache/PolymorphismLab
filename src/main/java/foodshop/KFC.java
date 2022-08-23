@@ -33,6 +33,10 @@ public class KFC extends FoodShop{
         return "Box meal";
     }
 
+    public String popularFood(String secondPop){
+        return String.format("%s",secondPop);
+    }
+
     public String addWings(){
         return "How many wings do you want?";
     }
