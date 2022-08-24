@@ -1,6 +1,6 @@
 package foodshop;
 
-public class FoodShop {
+public class FoodShop implements ISuggest{
 
     private boolean healthy;
 
@@ -40,5 +40,9 @@ public class FoodShop {
 
     public String popularFood(){
         return String.format("Our most popular food item is %s", this.name);
+    }
+
+    public String suggest(String food){
+        return String.format("Our special food of the day is %s", food);
     }
 }

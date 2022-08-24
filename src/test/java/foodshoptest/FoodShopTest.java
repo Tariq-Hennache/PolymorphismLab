@@ -35,6 +35,12 @@ public class FoodShopTest {
         String actual = foodShop.getName();
         assertEquals(expected, actual);
     }
+    @Test
+    public void canSuggest(){
+        String expected = "Our special food of the day is chicken poppers";
+        String actual = foodShop.suggest("chicken poppers");
+        assertEquals(expected, actual);
+    }
 
 }
 
